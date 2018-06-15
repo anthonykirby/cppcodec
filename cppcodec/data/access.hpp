@@ -163,6 +163,7 @@ public:
     }
     CPPCODEC_ALWAYS_INLINE void put(Result& result, char c)
     {
+		(void)result;	// bodge [-Wunused-parameter]
         m_buffer[m_offset++] = c;
     }
     CPPCODEC_ALWAYS_INLINE void finish(Result& result)
